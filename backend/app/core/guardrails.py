@@ -9,6 +9,7 @@ class ModerationResult(BaseModel):
 def is_math_related(text: str) -> bool:
     """A simple check to see if the query contains mathematical terms."""
     math_keywords = ["solve", "equation", "theorem", "calculate", "find", "integral", "derivative", "geometry", "algebra", "probability", "parabola", "function", "graph", "formula", "area", "volume", "history", "concept", "explain", "mathematics"]
+    
     if any(keyword in text.lower() for keyword in math_keywords):
         return True
     return False

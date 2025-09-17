@@ -1,2 +1,26 @@
-C:\Users\farhe\codesss\AIPlanet-Assignment2\venv
-C:\Users\farhe\codesss\AIPlanet-Assignment2\backend\.env
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+.history/
+
+# Environment variables
+.env
+
+# Frontend
+/frontend/node_modules/
+/frontend/build/
