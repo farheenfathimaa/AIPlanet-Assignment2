@@ -25,7 +25,7 @@ This project is an **Agentic-RAG architecture system with a human-in-the-loop fe
 6.  Install frontend dependencies: `cd frontend && npm install`
 7.  Copy `.env.example` to `.env` in the `backend` directory and fill in your API keys:
     ```
-    OPENAI_API_KEY="your_openai_api_key_here"
+    GOOGLE_API_KEY="your_openai_api_key_here"
     TAVILY_API_KEY="your_tavily_api_key_here"
     ```
 8.  Run a Qdrant Docker container: `docker run -p 6333:6333 qdrant/qdrant`
@@ -37,8 +37,8 @@ The application will be accessible at `http://localhost:3000`.
 
 ## Demo Video
 
-[Add your Loom or Google Drive link here]
+[Link](https://drive.google.com/file/d/1B9R8HA0IHD5IHNY8sxHyCusXvXuam5Jn/view?usp=sharing)
 
 ## Source Code
 
-[Add your GitHub repository URL here]
+[Link](https://github.com/farheenfathimaa/Math-Routing-Agent.git)
