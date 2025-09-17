@@ -1,0 +1,16 @@
+{
+    "problems": [
+        {
+            "question": "What is the definite integral of sin(x) from 0 to pi?",
+            "solution": "The integral of sin(x) is -cos(x). Evaluating from 0 to pi, we get (-cos(pi)) - (-cos(0)) = (-(-1)) - (-(1)) = 1 + 1 = 2."
+        },
+        {
+            "question": "Solve the quadratic equation x^2 - 4x + 4 = 0.",
+            "solution": "This is a perfect square trinomial, (x-2)^2 = 0. The only solution is x = 2."
+        },
+        {
+            "question": "A fair coin is flipped 3 times. What is the probability of getting exactly 2 heads?",
+            "solution": "Total possible outcomes are 2^3 = 8. The outcomes with exactly 2 heads are HHT, HTH, THH. There are 3 such outcomes. The probability is 3/8."
+        }
+    ]
+}

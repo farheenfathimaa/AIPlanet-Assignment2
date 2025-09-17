@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+langchain
+langgraph
+qdrant-client
+sentence-transformers
+python-dotenv
+dspy-ai
+tavily-python
+pydantic
+langchain-openai
+pydantic-settings
