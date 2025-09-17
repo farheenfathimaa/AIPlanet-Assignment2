@@ -24,3 +24,14 @@ Thumbs.db
 # Frontend
 /frontend/node_modules/
 /frontend/build/
+
+# Virtual environment
+venv/
+
+# Frontend packages
+/frontend/node_modules/
+
+# Other large/temporary files
+*.log
+__pycache__/
+*.pyc
