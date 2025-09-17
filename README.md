@@ -25,7 +25,7 @@ This project is an **Agentic-RAG architecture system with a human-in-the-loop fe
 6.  Install frontend dependencies: `cd frontend && npm install`
 7.  Copy `.env.example` to `.env` in the `backend` directory and fill in your API keys:
     ```
-    GOOGLE_API_KEY="your_openai_api_key_here"
+    GOOGLE_API_KEY="your_google_api_key_here"
     TAVILY_API_KEY="your_tavily_api_key_here"
     ```
 8.  Run a Qdrant Docker container: `docker run -p 6333:6333 qdrant/qdrant`
