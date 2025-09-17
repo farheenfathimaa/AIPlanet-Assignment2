@@ -1,27 +1,39 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import { BlockMath, InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
-import katex from 'katex';
+import ReactMarkdown from 'react-markdown';
 
 const SolutionDisplay = ({ solution }) => {
-  const solutionRef = useRef(null);
+  if (!solution || !solution.solution) {
+    return null;
+  }
 
-  useEffect(() => {
-    if (solutionRef.current && solution) {
-      solutionRef.current.innerHTML = solution.solution;
-      window.renderMathInElement(solutionRef.current, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$', right: '$', display: false },
-        ],
-        throwOnError: false,
-      });
-    }
-  }, [solution]);
+  const renderers = {
+    // This is the core fix: check if children is an array.
+    p: ({ children }) => {
+      const flatChildren = React.Children.toArray(children);
+      return <p>{flatChildren}</p>;
+    },
+    // We can also simplify how we handle code blocks
+    code: ({ children, inline, className }) => {
+      const codeContent = String(children).trim();
+      if (inline) {
+        return <InlineMath math={codeContent} />;
+      }
+      if (className && className.includes('language-latex')) {
+        return <BlockMath math={codeContent} />;
+      }
+      return <code>{codeContent}</code>;
+    },
+    // `ReactMarkdown` handles everything else by default
+  };
 
   return (
     <div className="solution-container">
       <h3>Solution</h3>
-      <div ref={solutionRef}></div>
+      <ReactMarkdown components={renderers}>
+        {solution.solution}
+      </ReactMarkdown>
       <p><em>Source: {solution.source}</em></p>
     </div>
   );

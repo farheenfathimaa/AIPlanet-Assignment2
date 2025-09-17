@@ -10,3 +10,4 @@ tavily-python
 pydantic
 langchain-openai
 pydantic-settings
+langchain-google-genai

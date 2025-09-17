@@ -7,8 +7,7 @@ app = FastAPI(
     description="An Agentic-RAG system that acts as a mathematical professor."
 )
 
-# CORS middleware for frontend communication
-origins = ["http://localhost:3000"]  # React default port
+origins = ["http://localhost:3000"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

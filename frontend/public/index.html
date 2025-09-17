@@ -9,10 +9,24 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <title>React App</title>
+    <title>Math Routing Agent</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wnjLwX+t4v8dYn7T+a6aA5+Q2N8pY0yF/w5z5h5z+z8i/2023/10/26" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-wnjLwX+t4v8dYn7T+a6aA5+Q2N8pY0yF/w5z5h5z+z8i/2023/10/26" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-y0v0a0p0s0m0t0i0o0j0h0g0f0e0d0c0b0a0z0x0w0u0r0q0p0l0k0i0h0g0f0d0c0b0a0z0x0w0u0r0q0p0l0k0i0h0g0f0d0c0b0a0z0x0w0u0r0q0p0l0k0" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                ]
+            });
+        });
+    </script>
   </body>
 </html>
